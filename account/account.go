@@ -5,6 +5,7 @@ import (
 	"noverde/core"
 )
 
+// Proccess accounts and transactions
 func Proccess(accounts core.Data, transactions core.Data) (data map[int]int) {
 	data = make(map[int]int)
 
@@ -28,6 +29,7 @@ func Proccess(accounts core.Data, transactions core.Data) (data map[int]int) {
 	return
 }
 
+// Show csv output
 func Show(accounts core.Data, totals map[int]int) {
 	for account, value := range accounts {
 		if totals[account] == 0 {

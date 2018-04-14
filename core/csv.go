@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// Data type a alias for map[int][]int
 type Data map[int][]int
 
 func openFile(path string) *csv.Reader {
@@ -31,7 +32,8 @@ func parseInt(value string) (valueInt int) {
 	return
 }
 
-func Parse(path string) (data Data) {
+// ParseAndRead a csv file
+func ParseAndRead(path string) (data Data) {
 	reader := openFile(path)
 
 	data = make(Data)

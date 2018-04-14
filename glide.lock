@@ -1,0 +1,6 @@
+hash: 52856f2aedf7c2d5dae5a1596672203009ee29f91e1d6348e2bebf7a4d2d78e3
+updated: 2018-04-14T02:23:27.642495-03:00
+imports:
+- name: github.com/franela/goblin
+  version: 74c9fe110d4bfd04c222a089a309e0a97e258534
+testImports: []

@@ -11,6 +11,7 @@ func checkArgs() {
 	}
 }
 
+// GetArgs passed to the program
 func GetArgs() (accountsPath string, transactionsPath string) {
 	checkArgs()
 

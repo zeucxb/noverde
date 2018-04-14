@@ -1,0 +1,4 @@
+package: noverde
+import:
+- package: github.com/franela/goblin
+  version: ^0.0.1
