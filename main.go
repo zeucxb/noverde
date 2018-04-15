@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"noverde/account"
 	"noverde/core"
 )
@@ -8,10 +9,12 @@ import (
 func main() {
 	accountsPath, transactionsPath := core.GetArgs()
 
-	accounts := core.Parse(accountsPath)
-	transactions := core.Parse(transactionsPath)
+	accounts := core.ParseAndRead(accountsPath)
+	transactions := core.ParseAndRead(transactionsPath)
 
 	totals := account.Proccess(accounts, transactions)
 
-	account.Show(accounts, totals)
+	output := account.FormatOutput(accounts, totals)
+
+	fmt.Println(output)
 }

@@ -29,13 +29,14 @@ func Proccess(accounts core.Data, transactions core.Data) (data map[int]int) {
 	return
 }
 
-// Show csv output
-func Show(accounts core.Data, totals map[int]int) {
+// FormatOutput formats csv output
+func FormatOutput(accounts core.Data, totals map[int]int) (output string) {
 	for account, value := range accounts {
 		if totals[account] == 0 {
 			totals[account] = value[0]
 		}
 
-		fmt.Printf("%v,%v\n", account, totals[account])
+		output += fmt.Sprintf("%v,%v\n", account, totals[account])
 	}
+	return
 }
